@@ -10,7 +10,7 @@ const getTasks = async (req, res) =>{
 const createTask = async (req, res) => {
     const task = new Task(req.body);
     await task.save();
-    res.json(task);
+    res.json(task); // <----This becomes res.data on the frontend
 };
 
 // Update a task
